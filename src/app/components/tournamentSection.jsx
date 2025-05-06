@@ -1,9 +1,10 @@
+'use client';
 import Image from 'next/image';
 import t_bb from 'scorecard/app/assets/images/t_bb.png';
 import t_kbd from 'scorecard/app/assets/images/t_kbd.png';
 import t_iim from 'scorecard/app/assets/images/t_iim.png';
 import t_footb from 'scorecard/app/assets/images/t_footb.png';
-
+import { useRouter } from 'next/navigation';
 const tournaments = [
     {
         name: 'Inter IIM',
@@ -36,8 +37,9 @@ const tournaments = [
 ];
 
 export default function TournamentSection() {
+    const router = useRouter();
   return (
-    <div className="w-full bg-black py-8">
+    <div className="w-full py-8">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between mb-8">
           <h2 className="text-white text-5xl font-bold font-montserrat">Tournaments</h2>
@@ -45,7 +47,7 @@ export default function TournamentSection() {
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
           {tournaments.map((t, idx) => (
-            <div key={idx} className="rounded-xl overflow-hidden shadow-lg flex flex-col">
+            <button key={idx} onClick={() => router.push(`/tournaments/${t.name}`)} className="rounded-xl overflow-hidden shadow-lg flex flex-col z-20 cursor-pointer hover:scale-105 transition-all duration-300 active:scale-95">
               <div className="relative w-full h-88">
                 <Image
                   src={t.image}
@@ -61,7 +63,7 @@ export default function TournamentSection() {
                   {t.date} | {t.location}
                 </div>
               </div>
-            </div>
+            </button>
           ))}
         </div>
       </div>

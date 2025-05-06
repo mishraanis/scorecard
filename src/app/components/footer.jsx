@@ -4,7 +4,7 @@ import headerLogo from 'scorecard/app/assets/icons/headerLogo.svg';
 
 export default function Footer() {
     return (
-        <footer className="bg-black w-full pt-8 pb-20 flex flex-col items-center">
+        <footer className=" w-full pt-8 pb-20 flex flex-col items-center">
             {/* Logo */}
             <div className="flex flex-col items-center w-full border-t border-[#555555] py-10">
                 <h1 className="w-full flex justify-center items-center text-white select-none">

@@ -111,10 +111,10 @@ export default function TournamentDetailPage({params}) {
     <div className="min-h-screen w-full max-w-[90rem] mx-auto py-12">
       {/* Breadcrumb */}
       <div className="text-[#ABABAB] text-sm mb-6 font-montserrat-regular">
-        Tournaments / <span className="text-white">Inter IIM</span>
+        Tournaments / <span className="text-white">{tournament.replaceAll('%20', ' ')}</span>
       </div>
       {/* Heading */}
-      <h1 className="text-white text-5xl font-montserrat-extrabold mb-8">Inter IIM</h1>
+      <h1 className="text-white text-5xl font-montserrat-extrabold mb-8">{tournament.replaceAll('%20', ' ')}</h1>
 
       {/* Points Table */}
       <div className="mb-12">
