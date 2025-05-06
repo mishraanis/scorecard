@@ -5,6 +5,51 @@
   --foreground: #171717;
 }
 
+.font-montserrat-regular {
+    font-family: var(--font-montserrat);
+    font-weight: 400;
+}
+
+.font-montserrat-medium {
+    font-family: var(--font-montserrat);
+    font-weight: 500;
+}
+
+.font-montserrat-semibold {
+    font-family: var(--font-montserrat);
+    font-weight: 600;
+}
+
+.font-montserrat-bold {
+    font-family: var(--font-montserrat);
+    font-weight: 700;
+}
+
+.font-montserrat-extrabold {
+    font-family: var(--font-montserrat);
+    font-weight: 800;
+}
+
+.font-plusJakarta-regular {
+    font-family: var(--font-plus-jakarta-sans);
+    font-weight: 400;
+}
+
+.font-plusJakarta-medium {
+    font-family: var(--font-plus-jakarta-sans);
+    font-weight: 500;
+}
+
+.font-plusJakarta-semibold {
+    font-family: var(--font-plus-jakarta-sans);
+    font-weight: 600;
+}
+
+.font-plusJakarta-bold {
+    font-family: var(--font-plus-jakarta-sans);
+    font-weight: 700;
+}
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -14,7 +59,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: black;
     --foreground: #ededed;
   }
 }
